@@ -73,7 +73,7 @@
     /*=========================================================================
     =                 TODO: fill in these Helper Functions                    =
     =========================================================================*/
-
+    // Time complexity of all helper functions is O(n), linear.
     // ROWS - run from left to right
     // --------------------------------------------------------------
     //
@@ -154,7 +154,7 @@
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
       var size = this.get('n');
-      for (var i = -(size - 2); i < size -1; i++) {
+      for (var i = -(size - 2); i < size - 1; i++) {
         if (this.hasMajorDiagonalConflictAt(i)) {
           return true;
         }
@@ -187,7 +187,7 @@
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
       var size = this.get('n');
-      for (var i = 1; i < size + 2; i++) {
+      for (var i = 1; i < size + (size - 2); i++) {
         if (this.hasMinorDiagonalConflictAt(i)) {
           return true;
         }
